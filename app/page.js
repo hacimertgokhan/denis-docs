@@ -29,22 +29,6 @@ const Page = () => {
                         development workflows.
                     </li>
                 </ul>
-
-                <br/>
-                <h2 className={"text-2xl font-bold"}>Core Classes</h2>
-                <h3>1. <code>actString</code></h3>
-                <p>Manage key-value pairs with simple <code>String</code> keys and values.</p>
-                <p><em>Example Use:</em> Storing user credentials (<code>username: password</code>).</p>
-                <br/>
-
-                <h3>2. <code>actListrig</code></h3>
-                <p>Associate a <code>List&lt;String&gt;</code> as a key with a <code>String</code> value.</p>
-                <p><em>Example Use:</em> Mapping product categories to descriptions.</p>
-                <br/>
-
-                <h3>3. <code>actStrist</code></h3>
-                <p>Associate a <code>String</code> key with a <code>List&lt;String&gt;</code> value.</p>
-                <p><em>Example Use:</em> Assigning multiple tags to a single group.</p>
                 <br/>
                 <h2 className={"text-2xl font-bold"}>Why Choose Denis Database?</h2>
                 <p>

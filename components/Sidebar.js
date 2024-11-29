@@ -17,7 +17,7 @@ const Sidebar = () => {
                     <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}><BookmarkIcon size={16}/> Denis</p></AccordionTrigger>
                     <AccordionContent className={"flex flex-col gap-1 items-start"}>
                         <Link href={"/"} className={"w-full flex flex-row justify-between"}>Welcome</Link>
-                        <Link href={""} className={"w-full flex flex-row justify-between"}>Updates & Versions</Link>
+                        <Link href={"/versions"} className={"w-full flex flex-row justify-between"}>Updates & Versions</Link>
                         <Link href={""} className={"w-full flex flex-row justify-between"}>Performance</Link>
                         <Link href={""} className={"w-full flex flex-row justify-between"}>Developers</Link>
                         <Link href={""} className={"w-full flex flex-row justify-between"}>Denis Database Server Setup</Link>

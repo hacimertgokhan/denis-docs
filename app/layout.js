@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${notoSans.variable} bg-[#09090b] text-[#e2e2e2] flex flex-row relative justify-center items-center antialiased`}
+        className={`${notoSans.variable} overflow-y-hidden bg-[#09090b] text-[#e2e2e2] flex flex-row relative justify-center items-center antialiased`}
       >
           <Sidebar/>
           <main className={"w-[70%] h-screen relative m-auto"}>
