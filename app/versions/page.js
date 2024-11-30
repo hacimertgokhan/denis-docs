@@ -14,7 +14,7 @@ const Page = () => {
 
         try {
             const response = await fetch(
-                "https://api.github.com/repos/hacimertgokhan/denis/commits" // Örnek public repo
+                "https://api.github.com/repos/hacimertgokhan/denis/commits"
             );
 
             if (!response.ok) {

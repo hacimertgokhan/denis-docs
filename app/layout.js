@@ -5,6 +5,7 @@ import {Separator} from "@/components/ui/separator";
 import React from "react";
 import Sidebar from "@/components/Sidebar";
 import Rightcontent from "@/components/RightContent";
+import {Toaster} from "sonner";
 
 const notoSans = Noto_Sans({
     subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
               <Separator orientation={"vertical"} className={"absolute w-[1px] h-screen bg-[#202020] left-0 top-0 bottom-0"}/>
               <Separator orientation={"vertical"} className={"absolute w-[1px] h-screen bg-[#202020] right-0 top-0 bottom-0"}/>
           </main>
+          <Toaster />
           <Rightcontent/>
       </body>
     </html>

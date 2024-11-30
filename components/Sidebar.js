@@ -18,9 +18,8 @@ const Sidebar = () => {
                     <AccordionContent className={"flex flex-col gap-1 items-start"}>
                         <Link href={"/"} className={"w-full flex flex-row justify-between"}>Welcome</Link>
                         <Link href={"/versions"} className={"w-full flex flex-row justify-between"}>Updates & Versions</Link>
-                        <Link href={""} className={"w-full flex flex-row justify-between"}>Performance</Link>
-                        <Link href={""} className={"w-full flex flex-row justify-between"}>Developers</Link>
-                        <Link href={""} className={"w-full flex flex-row justify-between"}>Denis Database Server Setup</Link>
+                        <Link href={"/developers"} className={"w-full flex flex-row justify-between"}>Developers</Link>
+                        <Link href={"/server/setup"} className={"w-full flex flex-row justify-between"}>Denis Database Server Setup</Link>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value={"drivers"}>
