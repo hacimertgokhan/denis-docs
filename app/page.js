@@ -6,37 +6,28 @@ const Page = () => {
     return (
         <div className={"p-4"}>
             <section>
-                <h2 className={"text-2xl font-bold"}>Overview</h2>
+                <h2 className="text-2xl font-bold">Genel Bakış</h2>
                 <p>
-                    Denis Database (DDB) is a powerful and lightweight Java library built on Redis logic. It simplifies
-                    data storage and manipulation through efficient caching mechanisms and an intuitive structure,
-                    making it ideal for managing temporary data.
+                    Denis Veritabanı (DDB), Redis mantığına dayalı olarak geliştirilmiş güçlü ve hafif bir Java kütüphanesidir.
+                    Verileri etkili önbellekleme mekanizmaları ve sezgisel bir yapı ile saklamayı ve manipüle etmeyi kolaylaştırır,
+                    bu da onu geçici veri yönetimi için ideal bir çözüm haline getirir.
                 </p>
-                <br/>
-                <h2 className={"text-2xl font-bold"}>Key Features</h2>
+                <br />
+                <h2 className="text-2xl font-bold">Temel Özellikler</h2>
                 <ul>
-                    <li><strong>Simple and Efficient:</strong> Perform CRUD operations effortlessly with easy-to-use
-                        methods.
-                    </li>
-                    <li><strong>Flexible Data
-                        Structures:</strong> Handle <code>String</code>, <code>List&lt;String&gt;</code>, and combined
-                        mappings seamlessly.
-                    </li>
-                    <li><strong>Parallel Operations:</strong> Built on <code>ConcurrentHashMap</code> for thread-safe
-                        and high-performance tasks.
-                    </li>
-                    <li><strong>Action-Based Categorization:</strong> Organize data with statuses for streamlined
-                        development workflows.
-                    </li>
+                    <li><strong>Basit ve Verimli:</strong> CRUD işlemlerini kolayca gerçekleştirmek için kullanımı kolay yöntemler sunar.</li>
+                    <li><strong>Esnek Veri Yapıları:</strong> <code>String</code>, <code>List&lt;String&gt;</code> ve birleştirilmiş eşlemeleri sorunsuzca yönetir.</li>
+                    <li><strong>Paralel İşlemler:</strong> <code>ConcurrentHashMap</code> üzerinde çalışarak, eşzamanlı ve yüksek performanslı görevler için güvenli bir yapı sağlar.</li>
+                    <li><strong>Eylem Tabanlı Kategorilendirme:</strong> Verileri durumlarına göre organize ederek geliştirme süreçlerini daha düzenli hale getirir.</li>
                 </ul>
-                <br/>
-                <h2 className={"text-2xl font-bold"}>Why Choose Denis Database?</h2>
+                <br />
+                <h2 className="text-2xl font-bold">Neden Denis Veritabanı?</h2>
                 <p>
-                    Denis Database empowers developers to efficiently manage temporary and structured data. Whether
-                    handling hierarchical data models, simple mappings, or parallel operations, it ensures speed and
-                    simplicity without compromising structure or performance.
+                    Denis Veritabanı, geliştiricilere geçici ve yapılandırılmış verileri etkili bir şekilde yönetme gücü verir.
+                    Hiyerarşik veri modelleri, basit eşlemeler veya paralel işlemleri ele alırken, hız ve sadelikten ödün vermeden
+                    yapı ve performansı garanti eder.
                 </p>
-                <p><strong>Start exploring Denis Database today and enhance your application!</strong></p>
+                <p><strong>Denis Veritabanı'nı bugün keşfedin ve uygulamanızı geliştirin!</strong></p>
             </section>
         </div>
     );
