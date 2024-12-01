@@ -38,20 +38,22 @@ const Page = () => {
     return (
         <div className={"p-4"}>
             <h1 className={"text-3xl mb-2 flex flex-row items-center justify-between"}>Last Updates <p className={"text-[16px]"}>0.0.0.2-alpha</p></h1>
-            <div className={"pt-2 gap-2 flex overflow-y-scroll h-screen flex-col"}>
+            <div className={"pt-2 gap-2 flex overflow-y-scroll h-[800px] flex-col"}>
                 {
                     loading === false ? (
                         <div className={"pt-2 gap-2 flex overflow-y-scroll h-screen flex-col"}>
                             {commits.map((commit) => (
                                 <Card className={"p-2 bg-[#09090b] border-[#202020] text-[14px] text-[#e2e2e2]"}
                                       key={commit.sha}>
-                                    <strong>{commit.commit.message}</strong> by{" "}
-                                    {commit.commit.author.name}
+                                    {commit.commit.author.name}:{" "}<strong>{commit.commit.message}</strong>
+
                                 </Card>
                             ))}
                         </div>
                     ) : (
-                        <div className="loader"></div>
+                        <div className={"w-full h-full flex items-center justify-center"}>
+                            <div className="loader"></div>
+                        </div>
                     )
                 }
             </div>
