@@ -13,7 +13,7 @@ import {
     HardDriveIcon,
     PackageIcon,
     PackageOpen,
-    SettingsIcon
+    SettingsIcon, TerminalIcon
 } from "lucide-react";
 
 const Sidebar = () => {
@@ -28,6 +28,14 @@ const Sidebar = () => {
                         <Link href={"/versions"} className={"w-full flex flex-row justify-between"}>Updates & Versions</Link>
                         <Link href={"/developers"} className={"w-full flex flex-row justify-between"}>Developers</Link>
                         <Link href={"/server/"} className={"w-full flex flex-row justify-between"}>Denis Database Server Setup</Link>
+                        <Link href={"/service/"} className={"w-full flex flex-row justify-between"}>Denis Database System Service</Link>
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value={"cli"}>
+                    <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}><TerminalIcon size={16}/> Command Line Interface</p></AccordionTrigger>
+                    <AccordionContent className={"flex flex-col gap-1 items-start"}>
+                        <Link href={"/cli/rust"} className={"w-full flex flex-row justify-between"}>Rust CLI <p className={"text-xs"}>Clap</p></Link>
+                        <Link href={"/cli/java"} className={"w-full flex flex-row justify-between"}>Java CLI <p className={"text-xs"}>PicoCLI</p></Link>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem className={"w-full"} value={"examples"}>
@@ -36,6 +44,15 @@ const Sidebar = () => {
                         <AccordionItem value={"examples_javascript"}>
                             <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}>Javascript</p></AccordionTrigger>
                             <AccordionContent className={"flex flex-col gap-1 items-start"}>
+                                <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>Vanilla <p className={"text-xs"}>to_do-app</p></Link>
+                                <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>React <p className={"text-xs"}>to_do-app</p></Link>
+                                <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>NextJS <p className={"text-xs"}>blog-app</p></Link>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value={"examples_typescript"}>
+                            <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}>Typescript</p></AccordionTrigger>
+                            <AccordionContent className={"flex flex-col gap-1 items-start"}>
+                                <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>Vanilla <p className={"text-xs"}>to_do-app</p></Link>
                                 <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>React <p className={"text-xs"}>to_do-app</p></Link>
                                 <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>NextJS <p className={"text-xs"}>blog-app</p></Link>
                             </AccordionContent>
@@ -68,8 +85,9 @@ const Sidebar = () => {
                     <AccordionContent className={"flex flex-col gap-1 items-start"}>
                         <Link href={"/drivers/java"} className={"w-full flex flex-row justify-between"}>Java <p className={"text-xs"}>0.0.2</p></Link>
                         <Link href={"/drivers/rust"} className={"w-full flex flex-row justify-between"}>Rust <p className={"text-xs"}>0.0.0</p></Link>
-                        <Link href={"/drivers/javascript"} className={"w-full flex flex-row justify-between"}>Javascript <p className={"text-xs"}>0.0.1</p></Link>
                         <Link href={"/drivers/php"} className={"w-full flex flex-row justify-between"}>PHP <p className={"text-xs"}>0.0.1</p></Link>
+                        <Link href={"/drivers/typescript"} className={"w-full flex flex-row justify-between"}>Typescript <p className={"text-xs"}>0.0.1</p></Link>
+                        <Link href={"/drivers/javascript"} className={"w-full flex flex-row justify-between"}>Javascript <p className={"text-xs"}>0.0.1</p></Link>
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value={"storage"}>
@@ -92,6 +110,13 @@ const Sidebar = () => {
                 <AccordionItem value={"documents"}>
                     <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}><BookIcon size={16}/> Documents</p></AccordionTrigger>
                     <AccordionContent className={"flex flex-col gap-1 w-full"}>
+                        <AccordionItem value={"documents_auth"}>
+                            <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}>AUTH</p></AccordionTrigger>
+                            <AccordionContent className={"flex flex-col gap-1 items-start"}>
+                                <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>Usage <p className={"text-xs"}>Example</p></Link>
+                                <Link href={"/documents/get/structure"} className={"w-full flex flex-row justify-between"}>Structure <p className={"text-xs"}>Library</p></Link>
+                            </AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value={"documents_get"}>
                             <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}>GET</p></AccordionTrigger>
                             <AccordionContent className={"flex flex-col gap-1 items-start"}>

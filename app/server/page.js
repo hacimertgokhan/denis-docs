@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from "next/link";
+import BottomBar from "@/components/BottomBar";
 
 const Page = () => {
     return (
@@ -12,6 +13,20 @@ const Page = () => {
                 <Link href={"/server/setup/linux"}># Linux için kurulum.</Link><br/>
                 <Link href={"/server/setup/windows"}># Windows için kurulum.</Link>
             </p>
+            <BottomBar isActive={true}
+                       elements={
+                           [
+                               {
+                                   name: "Linux",
+                                   address: "/server/setup/linux",
+                               },
+                               {
+                                   name: "Windows",
+                                   address: "/server/setup/windows",
+                               }
+                           ]
+                       }
+            />
         </div>
     );
 };

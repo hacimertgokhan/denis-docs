@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from "next/link";
+import BottomBar from "@/components/BottomBar";
 
 const Page = () => {
     return (
@@ -36,6 +37,24 @@ const Page = () => {
                     Yani üst sorumlu değere gitmek için alt elemanları kullanarak üst sorumlu elemana ulaşabiliriz.
                 </p>
             </div>
+            <BottomBar isActive={true}
+                       elements={
+                           [
+                               {
+                                   name: "actString",
+                                   address: "/modals/act/string"
+                               },
+                               {
+                                   name: "actListrig",
+                                   address: "/modals/act/listrig"
+                               },
+                               {
+                                   name: "actStrist",
+                                   address: "/modals/act/strist"
+                               }
+                           ]
+                       }
+            />
         </div>
     );
 };
