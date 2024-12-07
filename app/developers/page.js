@@ -17,7 +17,7 @@ const developers = [
 const Page = () => {
     return (
         <div className={"p-4"}>
-                <h1 className={"text-3xl mb-2 flex flex-row items-center justify-between"}>Developers</h1>
+                <h1 className={"text-3xl mb-2 flex flex-row items-center justify-between"}>Geliştiriciler</h1>
                 <p className={"flex flex-col gap-2 items-start justify-start w-full"}>
                     {
                         developers.map(developer => (

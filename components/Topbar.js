@@ -1,5 +1,5 @@
 import React from 'react';
-import {Bookmark, GithubIcon, Users} from "lucide-react";
+import {Bookmark, DownloadIcon, GithubIcon, Users} from "lucide-react";
 import {Separator} from "@/components/ui/separator";
 import Link from "next/link";
 
@@ -10,8 +10,9 @@ const Topbar = () => {
                 <div className={"flex flex-row gap-2 items-center justify-center"}>
                     <Link href={"https://github.com/hacimertgokhan/"}><GithubIcon size={16}/></Link>
                     <Link href={"https://github.com/hacimertgokhan/denis"}><Bookmark size={16}/></Link>
+                    <Link href={"https://github.com/hacimertgokhan/denis/releases"}><DownloadIcon size={16}/></Link>
                 </div>
-                <p className={"text-sm"}>Denis Database, All rights reserved.</p>
+                <p className={"text-sm"}>Denis Database, Bütün hakları saklıdır.</p>
             </div>
             <Separator orientation={"horizontal"} className={"bg-[#202020] right-0 top-0"}/>
         </div>
