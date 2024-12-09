@@ -36,7 +36,7 @@ const Page = () => {
 
 
     return (
-        <div className={"p-4"}>
+        <div className={"p-8"}>
             <h1 className={"text-3xl mb-2 flex flex-row items-center justify-between"}>Son Güncellemeler <p className={"text-[16px]"}>0.0.2.7-alpha</p></h1>
             <div className={"pt-2 gap-2 flex overflow-y-scroll h-[800px] flex-col"}>
                 {

@@ -110,7 +110,7 @@ const Page = () => {
 
 `;
     return (
-        <div className={"p-4 h-screen overflow-y-scroll"}>
+        <div className={"p-8 h-screen overflow-y-scroll"}>
             <h1 className={"text-3xl font-bold"}>PHP API</h1>
             <br/>
             <NodeCard title={"Komutu kullanarak PHP Sürücüsünü indirebilirsiniz."}

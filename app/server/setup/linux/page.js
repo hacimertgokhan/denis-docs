@@ -9,7 +9,7 @@ import files from "@/images/Ekran Görüntüsü - 2024-12-01 12-46-04.png";
 
 const Page = () => {
     return (
-        <div className={"p-6 h-[900px] overflow-y-scroll"}>
+        <div className={"p-8 h-[900px] overflow-y-scroll"}>
             <div>
                 <h1 className={"font-bold text-3xl"}>Adım 1</h1>
                 <p>

@@ -16,7 +16,7 @@ const Page = () => {
 
 
     return (
-        <div className={"p-4"}>
+        <div className={"p-8"}>
             <section id={"ubuntu"}>
                 <h1 className={"font-bold text-3xl"}>Ubuntu 24.04 & 6.8 Kernel</h1>
                 <p>Belirtilen servis DDB sunucusunun arkaplanda çalışmasına olanak sağlar.</p>

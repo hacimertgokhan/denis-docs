@@ -6,7 +6,7 @@ import BottomBar from "@/components/BottomBar";
 
 const Page = () => {
     return (
-        <div className={"p-4"}>
+        <div className={"p-8"}>
             <h1 className={"text-3xl font-bold"}>Veritabanı Kurulumu</h1>
             <p>
                 Windows ve Linux kurulumları detaylandırma amacıyla farklılaştırılmıştır.<br/>

@@ -2,22 +2,45 @@
 
 import { useState } from "react";
 import Collapse from "@/components/elements/Collapse";
+import NodeCard from "@/components/elements/NodeCard";
 
 export default function Home() {
-    const [activeCommand, setActiveCommand] = useState(null);
-
-    const toggleCommand = (command) => {
-        setActiveCommand(activeCommand === command ? null : command);
-    };
-
     return (
         <div className="h-screen p-8 overflow-y-scroll">
-            <h1 className="text-3xl font-bold text-gray-100 mb-4">DenisDB Komutları</h1>
-            <p className="text-lg text-gray-50 mb-8">
-                DenisDB, bellek ve protobuff tabanlı veritabanı dilidir. Aşağıdaki komutları
+            <h1 className="text-3xl font-bold text-gray-100 mb-4">Denis Java TKU</h1>
+            <p className="text-lg text-gray-50">
+                Denis, bellek ve protobuff tabanlı veritabanı dilidir. Java TKU<sup>1</sup> Aşağıdaki komutları
                 kullanarak sistemi yönetebilirsiniz.
             </p>
+            <br/>
+            <p>Java TKU, Veritabanı sunucusunun içerisine entegre edilmiş şekilde bulunur. Denis Rust TKU ile arasındaki
+                fark ise kullanım farklılığıdır. Rust TKU, yapı olarak bir karmaşıklık içermez ve direkt olarak sunucu
+                ile ilgili işlemleri gerçekleştirebilir. <br/> <br/>Tüm bunların dahilinde Rust TKU, karmaşıklaşmış
+                dosya
+                yapılarından sizi uzaklaştırır. Sıfırlama, yeniden oluşturma ve diğer benzeri işlemleri Java TKU
+                içerisinde barındırmıyorken
+                Rust TKU bu yapıları destekler.</p>
+            <NodeCard
+                title={"Linux Denis Java TKU Kullanımı"}
+                content={`
+                VERSION=$(grep -oP '^sem_ver=\\K.*' denis.conf)
+echo "Denis Database Integrated CLI (jcli-lnx-0.0.2alpha)"
+java -Dfile.encoding=UTF-8 -cp "denis-$VERSION-alpha.jar:lib/*" github.hacimertgokhan.denisdb.cli.CLIMain
+`}
+            />
+            <NodeCard
+                title={"Windows Denis Java TKU Kullanımı"}
+                content={`
+@echo off
+setlocal enabledelayedexpansion
+for /f "tokens=1,2 delims==" %%A in (denis.conf) do (
+    if "%%A"=="sem_ver" (set VERSION=%%B))
+echo Denis Database Integrated CLI (jcli-win-0.0.1alpha)
+java -Dfile.encoding=UTF-8 -cp "denis-%VERSION%-alpha.jar;lib/*" github.hacimertgokhan.denisdb.cli.CLIMain
 
+`}
+            />
+            <br/>
             <Collapse
                 h={"h-[75px]"}
                 content={
@@ -122,6 +145,13 @@ export default function Home() {
                 Burada yapılan tüm değişiklikler manuel olarak da yapılabilir, işlemler <span
                 className="font-semibold">denis.properties</span> dosyasına kaydedilir.
             </div>
+            <br/>
+            <div className={"text-xs"}>
+                <p>1: Terminal Komut Uygulaması</p>
+            </div>
+            <br/>
+            <br/>
+            <br/>
         </div>
     );
 }

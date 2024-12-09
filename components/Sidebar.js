@@ -113,8 +113,8 @@ const Sidebar = () => {
                         <AccordionItem value={"documents_auth"}>
                             <AccordionTrigger><p className={"flex flex-row items-center justify-start gap-1.5"}>AUTH</p></AccordionTrigger>
                             <AccordionContent className={"flex flex-col gap-1 items-start"}>
-                                <Link href={"/documents/get/usage"} className={"w-full flex flex-row justify-between"}>Kullanım <p className={"text-xs"}>Example</p></Link>
-                                <Link href={"/documents/get/structure"} className={"w-full flex flex-row justify-between"}>Yapı <p className={"text-xs"}>Library</p></Link>
+                                <Link href={"/documents/auth/usage"} className={"w-full flex flex-row justify-between"}>Kullanım <p className={"text-xs"}>Example</p></Link>
+                                <Link href={"/documents/auth/structure"} className={"w-full flex flex-row justify-between"}>Yapı <p className={"text-xs"}>Library</p></Link>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value={"documents_get"}>

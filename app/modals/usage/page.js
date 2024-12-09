@@ -4,7 +4,7 @@ import BottomBar from "@/components/BottomBar";
 
 const Page = () => {
     return (
-        <div className={"p-4"}>
+        <div className={"p-8"}>
             <h1 className={"font-bold text-3xl"}>Model Kullanımları</h1>
             <br/>
             <div>

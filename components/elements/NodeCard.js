@@ -24,9 +24,9 @@ const NodeCard = ({
     const lines = content.split('\n').filter(line => line.trim() !== '');
 
     return (
-        <div className="space-y-2">
+        <div className="space-y-2 mt-2">
             {title && (
-                <p className="text-sm font-medium text-muted-foreground">{title}</p>
+                <p className="text-sm font-medium text-gray-100">{title}</p>
             )}
             <div
                 onClick={handleCopy}

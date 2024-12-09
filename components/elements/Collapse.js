@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {ChevronLeft, ChevronLeftIcon} from "lucide-react";
 
 const Collapse = ({content, title, h}) => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
 
     return (
         <div className={"relative"}>
