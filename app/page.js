@@ -1,36 +1,49 @@
-"use client";
+import { CodeBlock, InfoGrid, PageIntro, Section, BulletList } from "@/components/docs/DocPrimitives";
+import { cliExamples, highlights, quickStartCommands } from "@/lib/docs-content";
 
-import React from 'react';
+export default function Page() {
+  return (
+    <div>
+      <PageIntro
+        eyebrow="Introduction"
+        title="Denis Database documentation"
+        description="Denis Database is a Java-based data engine positioned around Redis-like simplicity, temporary data access, and lightweight operational workflows. The upstream repository mixes product notes, runtime scripts, SQL examples, and action class snippets; this site reorganizes those pieces into a cleaner, practical manual."
+      />
 
-const Page = () => {
-    return (
-        <div className={"p-8"}>
-            <section>
-                <h2 className="text-2xl font-bold">Genel Bakış</h2>
-                <p>
-                    Denis Veritabanı (DDB), Redis mantığına dayalı olarak geliştirilmiş güçlü ve hafif bir Java kütüphanesidir.
-                    Verileri etkili önbellekleme mekanizmaları ve sezgisel bir yapı ile saklamayı ve manipüle etmeyi kolaylaştırır,
-                    bu da onu geçici veri yönetimi için ideal bir çözüm haline getirir.
-                </p>
-                <br />
-                <h2 className="text-2xl font-bold">Temel Özellikler</h2>
-                <ul>
-                    <li><strong>Basit ve Verimli:</strong> CRUD işlemlerini kolayca gerçekleştirmek için kullanımı kolay yöntemler sunar.</li>
-                    <li><strong>Esnek Veri Yapıları:</strong> <code>String</code>, <code>List&lt;String&gt;</code> ve birleştirilmiş eşlemeleri sorunsuzca yönetir.</li>
-                    <li><strong>Paralel İşlemler:</strong> <code>ConcurrentHashMap</code> üzerinde çalışarak, eşzamanlı ve yüksek performanslı görevler için güvenli bir yapı sağlar.</li>
-                    <li><strong>Eylem Tabanlı Kategorilendirme:</strong> Verileri durumlarına göre organize ederek geliştirme süreçlerini daha düzenli hale getirir.</li>
-                </ul>
-                <br />
-                <h2 className="text-2xl font-bold">Neden Denis Veritabanı?</h2>
-                <p>
-                    Denis Veritabanı, geliştiricilere geçici ve yapılandırılmış verileri etkili bir şekilde yönetme gücü verir.
-                    Hiyerarşik veri modelleri, basit eşlemeler veya paralel işlemleri ele alırken, hız ve sadelikten ödün vermeden
-                    yapı ve performansı garanti eder.
-                </p>
-                <p><strong>Denis Veritabanı'nı bugün keşfedin ve uygulamanızı geliştirin!</strong></p>
-            </section>
-        </div>
-    );
-};
+      <Section
+        title="What Denis is"
+        description="Based on the repository README and project structure, Denis is not just a library. It behaves more like a small runtime package with an embeddable Java core, command-line tools, and a server mode."
+      >
+        <InfoGrid items={highlights} />
+      </Section>
 
-export default Page;
+      <Section
+        title="Who this documentation is for"
+        description="This documentation is designed for developers evaluating the project, running a release build, or trying to understand how Denis exposes data through CLI, runtime files, and SQL-like commands."
+      >
+        <BulletList
+          items={[
+            "Use Quick Start if you want to build and run Denis immediately from source.",
+            "Use Installation if you plan to install a release bundle on Linux or Windows.",
+            "Use CLI Commands if you need the operational entry points for version, server, and token commands.",
+            "Use SQL Queries and Action Classes if you want the supported interaction surfaces documented in one place.",
+          ]}
+        />
+      </Section>
+
+      <Section
+        title="Fastest way to validate the project"
+        description="The repository README points to a local Maven build followed by direct jar execution."
+      >
+        <CodeBlock code={quickStartCommands} />
+      </Section>
+
+      <Section
+        title="Most useful runtime commands"
+        description="These are the CLI examples that matter first when you are validating a release install or a local build."
+      >
+        <CodeBlock code={cliExamples} />
+      </Section>
+    </div>
+  );
+}

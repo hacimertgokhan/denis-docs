@@ -3,26 +3,31 @@
 @tailwind utilities;
 
 * {
+  box-sizing: border-box;
   scroll-behavior: smooth;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 #09090b;
 }
 
-.loader {
-  width: 45px;
-  aspect-ratio: 1;
-  --c:no-repeat linear-gradient(#efefef 0 0);
-  background: var(--c), var(--c), var(--c);
-  animation:
-          l18-1 1s infinite,
-          l18-2 1s infinite;
+html {
+  background: #09090b;
 }
-@keyframes l18-1 {
-  0%,100% {background-size:20% 100%}
-  33%,66% {background-size:20% 20%}
+
+body {
+  margin: 0;
 }
-@keyframes l18-2 {
-  0%,33%   {background-position: 0    0,50% 50%,100% 100%}
-  66%,100% {background-position: 100% 0,50% 50%,0    100%}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, Monaco, "Courier New", monospace;
 }
 
 @layer base {
@@ -46,13 +51,9 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -73,11 +74,6 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
   }
 }
 
@@ -85,6 +81,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
